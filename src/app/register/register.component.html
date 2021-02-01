@@ -1,0 +1,178 @@
+<section id="register">
+	<div class="reg-form row">
+		<div class="col-lg-5" id="logo">
+        <img src="../assets/images/profile.png" alt="zulu logo">
+    </div>
+        <div class="form col-lg-6">
+            <h1 class="text-center" id="logo-text">zulu</h1>
+
+            <h2 class="text-center" id="header-text"> Create Account </h2>
+
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()" autocomplete="off"
+                novalidate>
+                <div class="alert alert-danger" *ngIf="registered && errorMessage">
+                    registration failed {{errorMessage}}
+                </div>
+
+
+                <div class="alert alert-success" *ngIf="registered">
+                    Your regristration was successful, Please <a routerLink="/"> login</a>
+                </div>
+                <div class="row">
+                    <div class=" col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidUsername()}">
+                        <label for="username">Username:</label>
+                        <input formControlName="username" id="username" type="text" class="form-control"
+                            placeholder="Username..." />
+                         <p *ngIf="invalidUsername()"  class="help-block">Username is required</p>
+
+                    </div>
+
+                    <div class=" col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidEmail()}">
+                        <label for="email">Email:</label>
+                        <input formControlName="email" id="email" type="email" class="form-control"
+                            placeholder="Email..." required />
+                        <p *ngIf="invalidEmail()" class="help-block">Email is required</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidFirstName()}">
+                        <label for="firstName">First Name:</label>
+                        <input formControlName="firstName" id="firstName" type="text" class="form-control"
+                            placeholder="First Name..." required />
+                        <p *ngIf="invalidFirstName()" id="first_name_error" class="help-block">first name is required</p>
+                    </div>
+
+                    <div class=" col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidLastName()}">
+                        <label for="lastName">Last Name:</label>
+                        <input formControlName="lastName" id="lastName" type="text" class="form-control"
+                            placeholder="Last Name..." required />
+                        <p *ngIf="invalidLastName()" id="last_name_error" class="help-block">last name is required</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidDOB()}">
+                        <label for="dob">Date Of Birth:</label>
+                        <input formControlName="dob" id="dob" type="date" class="form-control" required />
+                        <p *ngIf="invalidDOB()" id="dob_name_error" class="help-block">invalid date of birth</p>
+
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidCountry()}">
+                        <label for="Nationality">Country Of residence:</label>
+                        <select formControlName="country" id="country" type="text" class="form-control"
+                            placeholder="Nationality..." required>
+                            <option value="nigeria">Nigeria</option>
+                        </select>
+                        <p *ngIf="invalidCountry()" id="country_name_error" class="help-block">country is required</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                	<div class="col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidGender()}">
+                        <label for="gender">Gender:</label>
+                        <select formControlName="gender" id="gender" type="gender" class="form-control"
+                            placeholder="select.." required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <p *ngIf="invalidGender()" id="first_name_error" class="help-block">gender is required</p>
+
+                    </div>
+
+
+                    <div class="col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidGender()}">
+                        <label for="role">role:</label>
+                        <select formControlName="role" type="select" class="form-control" required>
+                            <option value="team leader">Team Leader</option>
+                            <option value="team member">Team Member</option>
+                            <option value="individual">Individual</option>
+
+                        </select>
+                        <p *ngIf="invalidGender()" id="first_name_error" class="help-block">gender is required</p>
+
+                    </div>
+
+                	    
+                </div>
+
+                <div class="row">
+                    
+                     <div class="form-group col-lg-4 col-sm-12">
+                    <label for="contact_number">Contact Number:</label>
+                    <input formControlName="contact_number" id="contact_number" type="number" class="form-control" />
+                   </div>
+
+
+
+                   <div class="form-group col-lg-5 col-sm-12">
+                    <label for="profile_pics">Profile Picture:</label>
+                    <input formControlName="profile_pics" id="profile_pics" type="file" class="form-control" />
+                   </div>
+
+
+
+                </div>
+
+
+
+                <div class="row">
+                    <div class=" col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidPassword()}">
+                        <label for="password">password:</label>
+                        <input required formControlName="password" id="password" type="password" class="form-control" />
+                        <small id="password-hint" class="hint">minimum of 8 characters</small>
+                        <p *ngIf="invalidPassword()" id="password_error" class="help-block">invalid password</p>
+
+                    </div>
+
+                    <div class=" col-lg-4 col-sm-12" [ngClass]="{'has-error': invalidConfirmPassword() || checkpassword()}" >
+                        <label for="confirmPassword"> Confirm password:</label>
+                        <input required appConfirmEqualValidator="password" formControlName="confirmPassword"
+                            id="confirmPassword" type="password" class="form-control" />
+                        <p *ngIf="invalidConfirmPassword()" id="confirm_password_error" class="help-block">confirm
+                            password</p>
+                            <p *ngIf="checkpassword()"  class="help-block">password do not match</p>
+
+
+                    </div>
+
+                </div>
+
+
+
+               <!-- <ngx-spinner bdcolor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+                    <p style="font-size:20px; color:white;">Processing....</p>
+
+                </ngx-spinner> -->
+
+                <div class="button-div">
+                    <button type="submit" class="submit">Create Account</button>
+
+                    <div>
+                        <p class="after-button" style="text-align:center;"> By clicking <i>Create Account</i>, you agree
+                            to
+                            our <a routerLink="">TERMS &
+                                CONDITIONS</a> and <a routerLink="">PRIVACY</a></p>
+                        <p class="change_link" style="text-align:center;">
+                            Already a member?
+                            <a routerLink="/login" class="to_login"> Log in</a>
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+
+		
+	</div>
+</section>

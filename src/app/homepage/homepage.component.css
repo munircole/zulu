@@ -1,0 +1,107 @@
+.logo-container{
+    width: 100%;
+}
+.logo{
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #29c785;
+    font-family: Kingthings_Exeterfont;
+    font-size: 50px;
+    padding: 3px;
+
+
+}
+
+button{
+    border:none;
+    margin-right: 3px;
+}
+
+.navbar-container{
+        background-color: #36151e;
+        border: none;
+}
+
+.sign-in{
+    color: #f9f9f9;
+    background: transparent;
+}
+
+.sign-up{
+    color: #29c785;
+    padding: 3px;
+    border-radius: 3px;
+    background: #f9f9f9;
+}
+
+
+
+.header-container{
+    height:100%;
+    padding: 30px;
+    background:  #36151e;
+    background-size: cover;
+    background-attachment:fixed;
+
+}
+.header-flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mat-display-1{
+    font-size: 35px
+  }
+  .join-now-container{
+    text-align: center;
+  }
+}
+
+
+img{
+    width: 100%;
+    max-width:100%;
+    object-fit: contain;
+
+}
+
+
+.mobile-header-container{
+    height: 100vh;
+}
+.join-now.container{
+    padding: 35px 115px;
+}
+
+
+.join-now{
+    height:50px;
+    width:250px;
+    color: #f9f9f9;
+    border:none;
+    background-color: #29c785;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.mat-display-1{
+    padding-bottom: 0px;
+    color: #f9f9f9;
+}
+
+h4{
+    padding-top: 0px;
+    color: #f9f9f9;
+    font-size: 16px;
+
+}

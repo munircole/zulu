@@ -1,0 +1,40 @@
+.edit-button{
+  padding: 10px;
+  background: white;
+}
+
+
+.edit{
+  width: 200px;
+  height: 30px;
+  border: none;
+  background: #29c785;
+  color: white;
+  border-radius: 30px;
+}
+
+.main-profile-section{
+  padding: 20px;
+}
+
+.image{
+  text-align: center;
+}
+
+
+img{
+  width: 250;
+  height: 225;
+  text-align: center;
+}
+
+h4{
+  display: inline-block;
+}
+
+.details{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+}

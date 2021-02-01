@@ -1,0 +1,72 @@
+<h1 class="text-center" id="logo-top">zulu</h1>
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right" id="sidebar-wrapper">
+      <div class="profile-pics">
+      	<img src="../assets/images/profile-pics.jpg" alt="Profile picture" class="profile-img">
+      	<h3 class="text-center">username</h3>
+        <span class="online">Online</span>
+      </div>
+      <div class="list-group list-group-flush">
+        <a routerLink="/dashboard" class="list-group-item list-group-item-action "><mat-icon class="menu-icon"><span class="aligned-with-icon">dashboard</span></mat-icon>Dashboard</a>
+        <a routerLink="/dashboard/projects" class="list-group-item list-group-item-action"><mat-icon>folder</mat-icon><span class="aligned-with-icon">Projects</span></a>
+        <a routerLink="/dashboard/documents" class="list-group-item list-group-item-action"><mat-icon>folder</mat-icon><span class="aligned-with-icon">Documents</span></a>
+        <a routerLink="/dashboard/calendar" class="list-group-item list-group-item-action"><mat-icon>calendar_today</mat-icon><span class="aligned-with-icon">Calendar</span></a>
+        <a routerLink="/dashboard/team-members" class="list-group-item list-group-item-action"><mat-icon>group_work</mat-icon><span class="aligned-with-icon">My Team</span></a>
+        <a routerLink="/dashboard/user-profile" class="list-group-item list-group-item-action"><mat-icon>account_circle</mat-icon><span class="aligned-with-icon">Profile Page</span></a>
+        <a routerLink="/dashboard/meeting" class="list-group-item list-group-item-action"><mat-icon>event</mat-icon><span class="aligned-with-icon">Meetings</span></a>
+        <a routerLink="/dashboard/chats" class="list-group-item list-group-item-action"><mat-icon>chat</mat-icon><span class="aligned-with-icon">Team Chat</span></a>
+
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="menu-button" id="menu-toggle"><mat-icon>format_align_left</mat-icon></button>
+
+            <li class="navbar ">
+              <a class="notification nav-link" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><mat-icon>notifications</mat-icon>
+              </a>
+            </li>
+
+
+       <a routerLink="/dashboard/create-project"> <button class="navbar button" id="">Create Project</button></a>
+
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><mat-icon>account_circle</mat-icon>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Edit Profile</a>
+                <a class="dropdown-item" href="#"></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" (click)="logout()">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+      	    <router-outlet></router-outlet>
+
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+

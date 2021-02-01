@@ -1,0 +1,37 @@
+.projects{
+	padding: 20px;
+}
+
+.filter{
+	display: flex;
+	justify-content: flex-end;
+
+}
+label{
+	color: grey;
+}
+
+select{
+	border:none;
+	color: black;
+	font-weight: bold;
+}
+.thumbnail{
+	background: white;
+	margin-top: 10px;
+	padding: 20px;
+	width: 250px;
+	height: 300px;
+	border-radius: 20px;
+}
+.down-section{
+	margin-top: 40px;
+}
+
+
+.team-members img{
+	margin-right: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}

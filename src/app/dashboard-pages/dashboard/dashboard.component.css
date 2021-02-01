@@ -1,0 +1,106 @@
+.dashboard{
+    margin: 0 0 30px;
+}
+.cards{
+    margin-bottom: 30px;
+}
+.card-box {
+    position: relative;
+    background: #f9f9f9;
+    color: #36151e;
+    padding: 20px 10px 40px;
+    margin: 20px 0px;
+}
+.card-box:hover {
+    text-decoration: none;
+}
+.card-box:hover .icon i {
+    font-size: 100px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.card-box .inner {
+    padding: 5px 10px 0 10px;
+}
+.card-box h3 {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    padding: 0;
+    text-align: left;
+}
+.card-box p {
+    font-size: 15px;
+}
+.card-box .card-box-footer {
+    position: absolute;
+    background: #36151e;
+    color: #f9f9f9;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px 0;
+    width: 100%;
+    text-decoration: none;
+}
+.card-box:hover .card-box-footer {
+    background: rgba(0, 0, 0, 0.3);
+}
+.card {
+    background-color: #00c0ef !important;
+}
+.bg-green {
+    background-color: green !important;
+}
+.bg-orange {
+    background-color: #f39c12 !important;
+}
+.bg-red {
+    background-color: #d9534f !important;
+}
+
+.saved-jobs{
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.applied-jobs{
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+.thumbnail{
+    background: #f9f9f9;
+    margin-top: 10px;
+    padding: 20px;
+    height: 300px;
+    border-radius: 20px;
+}
+.down-section{
+    margin-top: 40px;
+}
+
+
+.team-members img{
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.assigned-to{
+    font-weight: bold;
+}
+
+.task-thumbnail{
+    height: 200px;
+}

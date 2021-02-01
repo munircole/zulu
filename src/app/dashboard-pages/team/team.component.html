@@ -1,0 +1,50 @@
+<section class="meeting-section">
+	<div class="meeting">
+		<button  class="submit"  (click)="display($event)" (showSetting)="display($event)">Add A Member</button>
+    </div>
+
+     <add-team *ngIf="showSetting" id="setting" (hideSetting)="display($event)"> </add-team>
+
+    <div class="team-boxed">
+    	<div class="container">
+    		<div class="intro">
+    			<h2>Your Team Members</h2>
+    		</div>
+
+    		<div class="row people">
+    			<div class="col-md-6 col-lg-4">
+    				<div class="thumbnail">
+    				<div class="box text-center"><img src="/assets/images/profile-pics.jpg" class="rounded-circle"></div>
+    				<h3 class="name text-center">Ibrahim Munir</h3>
+    				<h4 class="phone text-center">08139735791</h4>
+    				<p class="role text-center">Team Leader</p>
+    			</div>
+
+    			</div>
+
+    			<div class="col-md-6 col-lg-4">
+    				  <div class="thumbnail">
+
+    				<div class="box text-center"><img src="/assets/images/team-member.jpg" class="rounded-circle"></div>
+    				<h3 class="name text-center">Braimah Amina</h3>
+    				<h4 class="phone text-center">09061675041</h4>
+    				<p class="role text-center">Team Member</p>
+                    </div>
+
+    			</div>
+
+    			<div class="col-md-6 col-lg-4 ">
+    				<div class="thumbnail">
+
+    				<div class="box text-center"><img src="/assets/images/small-video.jpg" class="rounded-circle"></div>
+    				<h3 class="name text-center">Leon Angela</h3>
+    				<h4 class="phone text-center">07035563816</h4>
+    				<p class="role text-center">Team Member</p>
+    			</div>
+
+    			</div>
+
+    		</div>
+    	</div>
+    </div>
+</section>

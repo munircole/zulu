@@ -1,0 +1,71 @@
+<section class="create-project">
+	<div class="container bg-light">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+		<h1> Create Task</h1>
+	   <div class="row">
+
+          <div class="form-group col-lg-4 col-sm-12">
+            <label for="taskName">Task Name:</label>
+            <input formControlName="taskName" id="taskName" type="text" class="form-control"
+              placeholder=" what to do..." required />
+          </div>
+
+          <div class="form-group col-lg-4 col-sm-12">
+            <label for="priority">Priority:</label>
+            <select required formControlName="priority" id="priority" type="text" class="form-control" >
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+           </select>
+          </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="form-group col-lg-3 col-sm-12">
+            <label for="start_date">start Date:</label>
+            <input required formControlName="start_date" id="start_date" type="date" class="form-control" />
+
+          </div>
+
+          <div class="form-group col-lg-3 col-sm-12">
+            <label for="end_date">End Date:</label>
+            <input required formControlName="end_date" id="end_date" type="date" class="form-control" />
+          </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="form-group col-lg-12 col-sm-12">
+            <label for="description">Task Description</label>
+            <textarea formControlName="description" id="description" type="text" class="form-control" cols="40" required ></textarea>
+          </div>
+
+          
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-lg-6 col-sm-12">
+            <label for="assigned_to">Assign To:</label>
+            <input formControlName="assigned_to" id="assigned_to" type="search" class="form-control" />
+          </div>
+
+        </div>
+
+
+        <button type="submit" class="submit">Create Project</button>
+
+
+</form>
+
+
+		
+	</div>
+	
+</section>

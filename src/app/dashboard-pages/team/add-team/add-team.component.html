@@ -1,0 +1,26 @@
+<div class="popup-container">
+  <div class="popup-window">
+    <header class="popup">
+      Add A Team Member
+    </header>
+    <div class="close" (click)="closeSetting()">
+      <img src="assets/images/close.png" />
+    </div>
+
+    <div class="form-container">
+      <div class="form-row">
+        <label for="username">Username</label>
+        <div class="input-field">
+          <input type="search" name="username" [(ngModel)]="selectedCameraId" >
+        </div>
+      </div>
+
+      <div class="popup-button-row">
+        <button class="btn" (click)="closeSetting()">Add Member</button>
+        <button class="btn" (click)="closeSetting()">Close</button>
+
+      </div>
+
+    </div>
+  </div>
+</div>

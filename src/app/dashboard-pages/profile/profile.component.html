@@ -1,0 +1,30 @@
+<section class="profile">
+	<div class="profile-section">
+		<div class="edit-button">
+            <button type="submit" class="edit">Edit Profile</button>
+		</div>
+		<div class="main-profile-section row">
+			<div class="image col-lg-3">
+				<img src="../../assets/images/profile-pics.jpg" alt="profile image">
+			</div>
+			<div class="details col-lg-7">
+				<div>
+				<h3> Contact Information</h3>
+				<h4>Username: </h4> &nbsp;&nbsp; <h4>{{user.username}}</h4> <br>
+				<h4>Email: </h4> &nbsp;&nbsp; <h4>{{user.email}}</h4> <br>
+				<h4>Name: </h4> &nbsp;&nbsp; <h4>{{user.lastName}} {{user.firstName}}</h4><br>
+				<h4>Country:</h4> &nbsp;&nbsp;<h4>{{user.country}}</h4><br>
+				<h4>Birthday: </h4> &nbsp;&nbsp;  <h4>{{user.dob | date}}</h4> <br>
+				 <h4>Status: </h4> &nbsp;&nbsp; <h4>{{user.role}}</h4>
+
+               </div>
+
+
+
+			</div>
+			
+			
+		</div>
+	</div>
+	
+</section>
