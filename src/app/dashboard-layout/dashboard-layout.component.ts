@@ -32,10 +32,10 @@ export class DashboardLayoutComponent implements OnInit {
 
     });
 
-    const isLoggedIn: boolean = this.auth.isLoggedIn();
-    if (!isLoggedIn) {
-      this.router.navigateByUrl('/');
-    }
+    //const isLoggedIn: boolean = this.auth.isLoggedIn();
+    //f (!isLoggedIn) {
+      //this.router.navigateByUrl('/');
+   // }
 
 
   this.auth.getUser(+this.route.snapshot.params['id']).subscribe(data => this.currentUser = data);

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/angular';
 
 
 
@@ -9,15 +8,6 @@ import { CalendarOptions } from '@fullcalendar/angular';
   styleUrls: ['./calendar.component.css']
 })
 export class CalendarComponent {
-  calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    weekends: false // initial value
-  };
-
-  toggleWeekends() {
-    this.calendarOptions.weekends = !this.calendarOptions.weekends // toggle the boolean!
-  }
-
 
 
 
